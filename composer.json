@@ -1,11 +1,11 @@
 {
     "name": "hexlet/code",
     "bin": ["bin/brain-games"],
-    "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
-    },
+     "autoload": {
+    "files": [
+      "src/Cli.php"  
+    ]
+ 	},
     "authors": [
         {
             "name": "Edmart",
@@ -16,6 +16,7 @@
     "license": "MIT",
 
     "require": {
-        "php": "*"
+        "php": "*",
+        "wp-cli/php-cli-tools": "^0.12.0"
     }
 }
