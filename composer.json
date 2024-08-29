@@ -11,6 +11,9 @@
             "email": "edmart666@gmail.com"
         }
     ],
+    "description": "php-project-45",
+    "license": "MIT",
+
     "require": {
         "php": "*"
     }
