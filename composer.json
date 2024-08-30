@@ -2,6 +2,11 @@
     "name": "hexlet/code",
     "bin": ["bin/brain-games",
              "bin/brain-even"],
+    "type": "project",
+  "scripts": {
+    "phpcs": "phpcs",
+    "phpcbf": "phpcbf"
+  },
      "autoload": {
     "files": [
       "src/Cli.php",
