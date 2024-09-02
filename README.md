@@ -3,4 +3,4 @@
 [![Actions Status](https://github.com/EdmartEmpty/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/EdmartEmpty/php-project-45/actions)
 
 Как играть в игру.
-https://asciinema.org/a/5kOpGm54xRScYhn3Ph3bFuWwb
+[https://asciinema.org/a/5kOpGm54xRScYhn3Ph3bFuWwb]
