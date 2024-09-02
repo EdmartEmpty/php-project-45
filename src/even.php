@@ -7,15 +7,15 @@ use function cli\prompt;
 
 function getRightAnwer()
 {
-    line('Добрый день!');
-        $name = prompt("Как вас зовут?\n");
-        line("Привет {$name}!");
-        line("Угадайте четное ли число?");
+    line('Welcome to the Brain Games!');
+        $name = prompt("May I have your name?\n");
+        line("Hello, {$name}!");
+        line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
 
     for ($i = 0; $i < 3; $i++) {
             $randcount = random_int(1, 10);
-            line("{$randcount}\n");
-            $useranswer = prompt("Ваш ответ\n");
+            line("Question: {$randcount}");
+            $useranswer = prompt("Your answer:\n");
             $useranswer = strtolower($useranswer);
             $rightanwem = '';
         switch (true) {
@@ -29,11 +29,13 @@ function getRightAnwer()
                 throw new \Exception('Нужно использовать только Yes и No');
         }
         if ($useranswer === $rightanwem) {
-                echo "Супер!\n";
+                echo "Correct!\n";
         } else {
-                echo "Попробуйте еще раз!\n";
+                 line("'{$useranswer}' is wrong answer ;(. Correct answer was '{$rightanwem}'.");
+                 line("Let's try again, {$name}!\n");
+                 exit;
         }
     }
-         echo 'Конец игры!';
+         echo "Congratulations, {$name}!";
 }
-     getRightAnwer();
+     //getRightAnwer();
