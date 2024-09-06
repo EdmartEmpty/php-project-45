@@ -1,7 +1,7 @@
 <?php
 
 namespace BrainGames\startGame;
-//require_once (__DIR__ . '/calc.php');
+
 
 const MIN_RANGE = 1;
 const MAX_RANGE = 10;
@@ -18,7 +18,7 @@ function startGame($gameDate, $ruls)
     line ($ruls);
 
     for ($i = 0; $i < ROUND_COUNT; $i++){
-        [$question,$answer] = $gameDate;
+        [$question,$answer] = $gameDate();
         line ("Question: {$question}\n");
         $useranswer = prompt("Your answer:\n");
 
@@ -32,6 +32,5 @@ function startGame($gameDate, $ruls)
         exit;
         }
     }
-
-    return 'Конец игры!';
+    return line("Congratulations {$name}");
 }

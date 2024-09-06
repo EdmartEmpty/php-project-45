@@ -1,8 +1,5 @@
 <?php
 namespace BrainGames\calc;
-require_once (__DIR__ . '/Engine.php');
-
-
 
 use function BrainGames\startGame\startGame;
 use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
@@ -10,7 +7,7 @@ use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
 function calcul ()
 {
-    $ruls = "Сделайте правильное вычисление";
+    $ruls = "What is the result of the expression?";
 
     $gameDate = function (){
     $num1 = random_int(MIN_RANGE, MAX_RANGE);
@@ -34,7 +31,7 @@ function calcul ()
     }
     return [$question, $answer];
 };
-    startGame ($gameDate,$ruls);
+    startGame ($gameDate, $ruls);
 }
      
 

@@ -12,7 +12,8 @@
     "files": [
       "src/Cli.php",
       "src/even.php",
-      "src/calc.php"  
+      "src/calc.php",
+      "src/Engine.php"  
     ]
  	},
     "authors": [
