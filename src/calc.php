@@ -1,13 +1,18 @@
 <?php
-
 namespace BrainGames\calc;
+require_once (__DIR__ . '/Engine.php');
 
-const MIN_RANGE = 1;
-const MAX_RANGE = 10;
-const ROUND_COUNT = 3;
 
-     function calcul (){
+
+use function BrainGames\startGame\startGame;
+use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
+
+
+function calcul ()
+{
     $ruls = "Сделайте правильное вычисление";
+
+    $gameDate = function (){
     $num1 = random_int(MIN_RANGE, MAX_RANGE);
     $num2 = random_int(MIN_RANGE, MAX_RANGE);
     $sing = ['+' => '+','-' => '-','*' => '*'];
@@ -27,29 +32,9 @@ const ROUND_COUNT = 3;
         default:
             throw new \Exception ('Нужно использовать только цифры');
     }
-    return  $gameDate = ['ruls' =>$ruls,'question'=> $question, 'answer'=> $answer];
+    return [$question, $answer];
+};
+    startGame ($gameDate,$ruls);
 }
+     
 
-function startGame(){
-    echo "Добрый день!\n";
-    $name = readline("Как вас зовут?\n");
-    //$name = 'Ed';
-    echo "Привет {$name}!\n";
-    $getDate = calcul();
-    echo $getDate['ruls'];
-    for ($i = 0; $i < ROUND_COUNT; $i++){
-        $getDate = calcul();
-        echo "Вопрос: {$getDate['question']}\n";
-        $useranswer = readline("Ваш ответ\n");
-        $useranswer = strtolower($useranswer);
-        $answer = $getDate['answer'];
-    if ($useranswer == $answer){
-        echo "Супер!{$name} ты молодец!\n";
-    } elseif ($useranswer !== $answer ){
-        echo "Ваш ответ {$useranswer} не верный. Правильный ответ {$answer}";
-        exit;
-    }
-    }
-    echo 'Конец игры!';
-}
-startGame();

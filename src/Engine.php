@@ -1,29 +1,37 @@
 <?php
 
 namespace BrainGames\startGame;
-require_once (__DIR__ . '/calc.php');
+//require_once (__DIR__ . '/calc.php');
 
-use function BrainGames\calc\calcul;
+const MIN_RANGE = 1;
+const MAX_RANGE = 10;
+const ROUND_COUNT = 3;
 
-function startGame(){
-    echo "Добрый день!\n";
-    $name = readline("Как вас зовут?\n");
-    echo "Привет {$name}!\n";
-    $getDate = calcul();
-    echo $getDate['ruls'];
+use function cli\line;
+use function cli\prompt;
+
+function startGame($gameDate, $ruls)
+{
+    line('Welcome to the Brain Games!');
+    $name = prompt("May I have your name?\n");
+    line("Hello, {$name}!");
+    line ($ruls);
+
     for ($i = 0; $i < ROUND_COUNT; $i++){
-        $getDate = calcul();
-        echo "Вопрос: {$getDate['question']}\n";
-        $useranswer = readline("Ваш ответ\n");
-        $useranswer = strtolower($useranswer);
-        $answer = $getDate['answer'];
+        [$question,$answer] = $gameDate;
+        line ("Question: {$question}\n");
+        $useranswer = prompt("Your answer:\n");
+
     if ($useranswer == $answer){
-        echo "Супер!{$name} ты молодец!\n";
-    } elseif ($useranswer !== $answer ){
-        echo "Ваш ответ {$useranswer} не верный. Правильный ответ {$answer}";
+        line ("Correct! {$name}\n");
+        } 
+        elseif ($useranswer !== $answer )
+        {
+        line("'{$useranswer}' is wrong answer ;(. Correct answer was '{$answer}'.");
+        line("Let's try again, {$name}!\n");
         exit;
+        }
     }
-    }
-    echo 'Конец игры!';
+
+    return 'Конец игры!';
 }
-startGame();
