@@ -4,6 +4,8 @@ brain-even:
 	 ./bin/brain-even
 brain-games:
 	./bin/brain-games
+brain-calc:
+	./bin/brain-calc
 validate:
 	composer validate
 lint:
