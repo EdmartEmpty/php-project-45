@@ -16,4 +16,4 @@
 
 Как играть в игру "Наибольший общий делитель (НОД)"!
 Используйте команду make brain-gcd
-[![asciicast](https://asciinema.org/a/ZQTzJ5QHSb9AWzYZN7xuWwovJ.svg)]((https://asciinema.org/a/ZQTzJ5QHSb9AWzYZN7xuWwovJ)
+[![asciicast](https://asciinema.org/a/ZQTzJ5QHSb9AWzYZN7xuWwovJ.svg)](https://asciinema.org/a/ZQTzJ5QHSb9AWzYZN7xuWwovJ)
