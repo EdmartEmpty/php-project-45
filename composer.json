@@ -4,7 +4,8 @@
             "bin/brain-even",
             "bin/brain-calc",
             "bin/brain-gcd",
-            "bin/brain-progression"],
+            "bin/brain-progression",
+            "bin/brain-prime"],
     "type": "project",
   "scripts": {
     "phpcs": "phpcs",
@@ -17,7 +18,8 @@
       "src/calc.php",
       "src/Engine.php",
       "src/gcd.php",
-      "src/progression.php"  
+      "src/progression.php",
+      "src/prime.php"  
     ]
  	},
     "authors": [

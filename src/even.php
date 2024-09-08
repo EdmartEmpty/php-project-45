@@ -11,9 +11,9 @@ function getRightAnwer()
     $ruls ="Answer \"yes\" if the number is even, otherwise answer \"no\".";
 
     $gameDate = function () {
-        $question = random_int(MIN_RANGE,MAX_RANGE);
+        $question = random_int(MIN_RANGE, MAX_RANGE);
         $answer = '';
-    switch (true){
+        switch (true){
         case $question % 2 == 0:
             $answer = 'yes';
             break;
@@ -21,8 +21,8 @@ function getRightAnwer()
             $answer = 'no';
             break;
         default:
-            throw new \Exception ('Нужно использовать только цифры');
-    }
+            throw new \Exception('Нужно использовать только цифры');
+        }
         return [$question, $answer];
     };
     startGame($gameDate, $ruls);
