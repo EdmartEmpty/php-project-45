@@ -4,7 +4,7 @@ namespace BrainGames\startGame;
 
 
 const MIN_RANGE = 1;
-const MAX_RANGE = 10;
+const MAX_RANGE = 100;
 const ROUND_COUNT = 3;
 
 use function cli\line;

@@ -1,8 +1,9 @@
 {
     "name": "hexlet/code",
     "bin": ["bin/brain-games",
-             "bin/brain-even",
-            "bin/brain-calc"],
+            "bin/brain-even",
+            "bin/brain-calc",
+            "bin/brain-gcd"],
     "type": "project",
   "scripts": {
     "phpcs": "phpcs",
@@ -13,7 +14,8 @@
       "src/Cli.php",
       "src/even.php",
       "src/calc.php",
-      "src/Engine.php"  
+      "src/Engine.php",
+      "src/gcd.php"  
     ]
  	},
     "authors": [
