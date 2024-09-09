@@ -14,12 +14,12 @@
      "autoload": {
     "files": [
       "src/Cli.php",
-      "src/even.php",
-      "src/calc.php",
+      "src/games/even.php",
+      "src/games/calc.php",
       "src/Engine.php",
-      "src/gcd.php",
-      "src/progression.php",
-      "src/prime.php"  
+      "src/games/gcd.php",
+      "src/games/progression.php",
+      "src/games/prime.php"  
     ]
  	},
     "authors": [
