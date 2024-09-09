@@ -8,10 +8,10 @@ use function BrainGames\startGame\startGame;
 use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
 const MAX_LENGHT = 10;
-/**
- * Функция создающая массив из чисел 
+/**  
+ * Функция getFieldStep($start, $finish, $step) создающая массив из чисел c "шагом" арифмитической прогресии.
  **/
-function getStep($start, $finish, $step)
+function getFieldStep($start, $finish, $step)
 {
     $result = [];
     for ($i = $start; $i <= $finish; $i += $step) {
@@ -20,19 +20,19 @@ function getStep($start, $finish, $step)
     return $result;
 }
 /**
- * Данные игры , вопрос , ответ. 
+ * Данные игры getProGression() : вопрос $question , ответ $answer. 
  **/
 function getProGression()
 {
     $ruls = "What number is missing in the progression?";
     $gameDate = function () {
         $randStep = rand(MIN_RANGE, MAX_LENGHT);
-        $arr = getStep(MIN_RANGE, MAX_RANGE, $randStep);
-        $index = array_rand($arr, 1);
-        $answer = $arr[$index];
+        $fieldForGame = getFieldStep(MIN_RANGE, MAX_RANGE, $randStep);
+        $index = array_rand($fieldForGame, 1);
+        $answer = $fieldForGame[$index];
 
-        $arr[$index] = '..';
-        $question = implode(" ", $arr);
+        $fieldForGame[$index] = '..';
+        $question = implode(" ", $fieldForGame);
         return [$question, $answer];
     };
         startGame($gameDate, $ruls);
