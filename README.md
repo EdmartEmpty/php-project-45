@@ -3,7 +3,7 @@
 [![Actions Status](https://github.com/EdmartEmpty/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/EdmartEmpty/php-project-45/actions)
 
 Как установить зависимиости :
-
+Используйте команду make install
 [![asciicast](https://asciinema.org/a/7x6oQP03ifeLkN7LJAN3GBnPI.svg)](https://asciinema.org/a/7x6oQP03ifeLkN7LJAN3GBnPI)
 
 Как играть в игру четное - не четное.
