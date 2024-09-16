@@ -29,5 +29,5 @@ function startGame($gameDate, $ruls)
             exit;
         }
     }
-    return line("Congratulations {$name}");
+    return line("Congratulations, {$name}!");
 }
