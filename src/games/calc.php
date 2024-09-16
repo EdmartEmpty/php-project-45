@@ -1,9 +1,10 @@
 <?php
+
 namespace BrainGames\calc;
 
 use function BrainGames\startGame\startGame;
-use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
+use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
 function calcul()
 {
@@ -16,22 +17,20 @@ function calcul()
         $randomsing = array_rand($sing);
         $question = "{$num1}{$randomsing}{$num2}";
         $answer = '';
-        switch ($randomsing){
-        case '+':
-            $answer = $num1 + $num2;
-            break;
-        case '-':
-            $answer = $num1 - $num2;
-            break;
-        case '*':
-            $answer = $num1 * $num2;
-            break;
-        default:
-            throw new \Exception('Нужно использовать только цифры');
+        switch ($randomsing) {
+            case '+':
+                $answer = $num1 + $num2;
+                break;
+            case '-':
+                $answer = $num1 - $num2;
+                break;
+            case '*':
+                $answer = $num1 * $num2;
+                break;
+            default:
+                throw new \Exception('Нужно использовать только цифры');
         }
         return [$question, $answer];
     };
     startGame($gameDate, $ruls);
 }
-     
-

@@ -1,14 +1,17 @@
 <?php
+
 /**
- * Игра прогрессия 
+ * Игра прогрессия
  **/
+
 namespace BrainGames\Progression;
 
 use function BrainGames\startGame\startGame;
+
 use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
 const MAX_LENGHT = 10;
-/**  
+/**
  * Функция getFieldStep($start, $finish, $step) создающая массив из чисел c "шагом" арифмитической прогресии.
  **/
 function getFieldStep($start, $finish, $step)
@@ -16,11 +19,11 @@ function getFieldStep($start, $finish, $step)
     $result = [];
     for ($i = $start; $i <= $finish; $i += $step) {
         $result[] = $i;
-    }   
+    }
     return $result;
 }
 /**
- * Данные игры getProGression() : вопрос $question , ответ $answer. 
+ * Данные игры getProGression() : вопрос $question , ответ $answer.
  **/
 function getProGression()
 {

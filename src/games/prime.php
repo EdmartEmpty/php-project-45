@@ -1,12 +1,16 @@
 <?php
+
 /**
- * Игра простое число 
+ * Игра простое число
  **/
+
 namespace Braingames\Prime;
 
 use function BrainGames\startGame\startGame;
+
 use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
-/**  
+
+/**
  * Функция getPrime проверяющая является ли число $num простым.
  **/
 function getPrime($num)
@@ -24,7 +28,7 @@ function getPrime($num)
         return true;
     }
 }
-/**  
+/**
  * Функция getPrimeInt() данные игры  : вопрос $question , ответ $answer.
  **/
 function getPrimeInt()
