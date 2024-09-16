@@ -2,14 +2,12 @@
 
 namespace BrainGames\startGame;
 
-/**
- * Набор констан которые указывают диапазон чисел  от MIN_RANGE до MAX_RANGE учавствующих в игре и кол-во раундов ROUND_COUNT
- **/
-
 const MIN_RANGE = 1;
 const MAX_RANGE = 100;
 const ROUND_COUNT = 3;
-
+/**
+ * Набор констан которые указывают диапазон чисел  от MIN_RANGE до MAX_RANGE учавствующих в игре и кол-во раундов ROUND_COUNT
+ **/
 use function cli\line;
 use function cli\prompt;
 /**
