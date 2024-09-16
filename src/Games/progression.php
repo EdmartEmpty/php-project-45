@@ -14,7 +14,7 @@ const MAX_LENGHT = 10;
 /**
  * Функция getFieldStep($start, $finish, $step) создающая массив из чисел c "шагом" арифмитической прогресии.
  **/
-function getFieldStep($start, $finish, $step)
+function getFieldStep(int $start, int $finish, int $step): array
 {
     $result = [];
     for ($i = $start; $i <= $finish; $i += $step) {

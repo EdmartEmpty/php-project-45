@@ -13,7 +13,7 @@ use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 /**
  * Функция getPrime проверяющая является ли число $num простым.
  **/
-function getPrime($num)
+function getPrime(int $num): bool
 {
     if ($num <= 1) {
         return false;

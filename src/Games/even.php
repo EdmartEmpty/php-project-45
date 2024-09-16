@@ -17,7 +17,7 @@ function getRightAnwer()
             case $question % 2 == 0:
                 $answer = 'yes';
                 break;
-            case $question % 2 !== 0:
+            case $question % 2 != 0:
                 $answer = 'no';
                 break;
             default:
