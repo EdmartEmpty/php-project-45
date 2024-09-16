@@ -8,8 +8,13 @@ use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
 function gcd(mixed $a, mixed $b)
 {
-    return $b ? gcd($b, $a % $b) : $a;
+    if ($b != 0) {
+        return gcd($b, $a % $b);
+    } else {
+        return $a;
+    }
 }
+
 
 function getGcdDate()
 {
