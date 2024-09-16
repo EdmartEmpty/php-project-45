@@ -6,11 +6,14 @@ use function BrainGames\startGame\startGame;
 
 use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
-function calcul()
+/**
+ * Функция generationDataCalcul() генерирует данные для игры Calcul - веселая игра в калькулятор
+ **/
+function generationDataCalcul()
 {
-    $ruls = "What is the result of the expression?";
+    $rules = "What is the result of the expression?";
 
-    $gameDate = function () {
+    $gameData = function () {
         $num1 = random_int(MIN_RANGE, MAX_RANGE);
         $num2 = random_int(MIN_RANGE, MAX_RANGE);
         $sing = ['+','-','*'];
@@ -32,5 +35,5 @@ function calcul()
         }
         return [$question, $answer];
     };
-    startGame($gameDate, $ruls);
+    startGame($gameData, $rules);
 }

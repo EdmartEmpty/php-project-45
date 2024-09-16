@@ -6,11 +6,14 @@ use function BrainGames\startGame\startGame;
 
 use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
-function getRightAnwer()
+/**
+ * Функция generationDataEvenOdd() генерирует данные для игры Even or Odd
+ **/
+function generationDataEvenOdd()
 {
-    $ruls = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+    $rules = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
 
-    $gameDate = function () {
+    $gameData = function () {
         $question = random_int(MIN_RANGE, MAX_RANGE);
         $answer = '';
         switch (true) {
@@ -25,5 +28,5 @@ function getRightAnwer()
         }
         return [$question, $answer];
     };
-    startGame($gameDate, $ruls);
+    startGame($gameData, $rules);
 }

@@ -13,7 +13,7 @@ use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 /**
  * Функция getPrime проверяющая является ли число $num простым.
  **/
-function getPrime(int $num): bool
+function isPrime(int $num): bool
 {
     if ($num <= 1) {
         return false;
@@ -29,17 +29,17 @@ function getPrime(int $num): bool
     }
 }
 /**
- * Функция getPrimeInt() данные игры  : вопрос $question , ответ $answer.
+ * Функция generationDataPrimeInt() генерирует данные для игры PrimeInt
  **/
-function getPrimeInt()
+function generationDataPrimeInt()
 {
-    $ruls = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    $gameDate = function () {
+    $gameData = function () {
 
         $question = random_int(MIN_RANGE, MAX_RANGE);
-        $answer = (getPrime($question) === true) ? "yes" : "no";
+        $answer = (isPrime($question) === true) ? "yes" : "no";
         return [$question, $answer];
     };
-    startGame($gameDate, $ruls);
+    startGame($gameData, $rules);
 }

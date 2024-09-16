@@ -12,9 +12,9 @@ use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
 const MAX_LENGHT = 10;
 /**
- * Функция getFieldStep($start, $finish, $step) создающая массив из чисел c "шагом" арифмитической прогресии.
+ * Функция generationProgression($start, $finish, $step) создающая массив из чисел c "шагом" арифмитической прогресии.
  **/
-function getFieldStep(int $start, int $finish, int $step): array
+function generationProgression(int $start, int $finish, int $step): array
 {
     $result = [];
     for ($i = $start; $i <= $finish; $i += $step) {
@@ -23,14 +23,14 @@ function getFieldStep(int $start, int $finish, int $step): array
     return $result;
 }
 /**
- * Данные игры getProGression() : вопрос $question , ответ $answer.
+ * Функция generationDataProgression() генерирует данные для игры Progression
  **/
-function getProGression()
+function generationDataProgression()
 {
-    $ruls = "What number is missing in the progression?";
-    $gameDate = function () {
+    $rules = "What number is missing in the progression?";
+    $gameData = function () {
         $randStep = rand(MIN_RANGE, MAX_LENGHT);
-        $fieldForGame = getFieldStep(MIN_RANGE, MAX_RANGE, $randStep);
+        $fieldForGame = generationProgression(MIN_RANGE, MAX_RANGE, $randStep);
         $index = array_rand($fieldForGame, 1);
         $answer = $fieldForGame[$index];
 
@@ -38,5 +38,5 @@ function getProGression()
         $question = implode(" ", $fieldForGame);
         return [$question, $answer];
     };
-        startGame($gameDate, $ruls);
+        startGame($gameData, $rules);
 }
