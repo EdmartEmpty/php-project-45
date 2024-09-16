@@ -6,7 +6,7 @@ use function BrainGames\startGame\startGame;
 
 use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
-function gcd(int $a, int $b) 
+function gcd(int $a, int $b)
 {
     return $b ? gcd($b, $a % $b) : $a;
 }

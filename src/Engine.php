@@ -9,7 +9,7 @@ const ROUND_COUNT = 3;
 use function cli\line;
 use function cli\prompt;
 
-function startGame($gameDate, $ruls)
+function startGame(callable $gameDate, string $ruls)
 {
     line('Welcome to the Brain Games!');
     $name = prompt("May I have your name?\n");
