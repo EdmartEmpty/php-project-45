@@ -21,7 +21,7 @@ function startGame($gameDate, $ruls)
         line("Question: {$question}\n");
         $useranswer = prompt("Your answer:\n");
 
-        if ($useranswer == $answer) {
+        if ($useranswer === $answer) {
             line("Correct! {$name}\n");
         } elseif ($useranswer !== $answer) {
             line("'{$useranswer}' is wrong answer ;(. Correct answer was '{$answer}'.");

@@ -18,7 +18,7 @@ function getGcdDate()
     $gameDate = function () {
         $num1 = random_int(MIN_RANGE, MAX_RANGE);
         $num2 = random_int(MIN_RANGE, MAX_RANGE);
-        $question = "{$num1},{$num2}";
+        $question = "{$num1} {$num2}";
         $answer = gcd($num1, $num2);
         return [$question, $answer];
     };
