@@ -15,7 +15,7 @@ function calcul()
         $num2 = random_int(MIN_RANGE, MAX_RANGE);
         $sing = ['+','-','*'];
         $randomsing = $sing[rand(0,2)];
-        $question = "{$num1}{$randomsing}{$num2}";
+        $question = "{$num1} {$randomsing} {$num2}";
         $answer = '';
         switch ($randomsing) {
             case '+':
