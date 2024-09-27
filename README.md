@@ -5,24 +5,26 @@
 <h3 align="center">Для того что бы начать играть в игры которые я тебе приготовил тебе нужно:
 Склонировать репозиторий к себе через команду git clone https://github.com/EdmartEmpty/php-project-45.git</h3>
 
+### Setup
 
+```
 Далее необходимо следовать инструкции которая распологается ниже. 
+```
 Как установить зависимиости :
 Используйте команду make install
-
+[![asciicast](https://asciinema.org/a/t1si59Du3jAuRzfqUxUA4C3kj.svg)](https://asciinema.org/a/t1si59Du3jAuRzfqUxUA4C3kj)
 
 Как играть в игру четное - не четное.
 Используйте команду make brain-even 
-
+[![asciicast](https://asciinema.org/a/CTXYwrjqQydksJkk2D6wyZ9cj.svg)](https://asciinema.org/a/CTXYwrjqQydksJkk2D6wyZ9cj)
 
 Как играть в игру калькулятор.
 Используйте команду make brain-calc 
-
-
+[![asciicast](https://asciinema.org/a/43tWAtdQQ4FLgPxMGRGT5gxfM.svg)](https://asciinema.org/a/43tWAtdQQ4FLgPxMGRGT5gxfM)
 Как играть в игру "Наибольший общий делитель (НОД)"!
 Используйте команду make brain-gcd
-
+[![asciicast](https://asciinema.org/a/lAVNksNFPDBmlGF38toCWn8Ak.svg)](https://asciinema.org/a/lAVNksNFPDBmlGF38toCWn8Ak)
 
 Как играть в игру прогрессия. 
 Используйте команду make brain-progression
-
+[![asciicast](https://asciinema.org/a/5zAJT7BrmrO78q25y0YoQ97gp.svg)](https://asciinema.org/a/5zAJT7BrmrO78q25y0YoQ97gp)
