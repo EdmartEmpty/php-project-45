@@ -7,7 +7,7 @@ use function BrainGames\startGame\startGame;
 use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
 /**
- * Функция calculate($num1, $num2, $operator) совершает математическую операцию операцию над числами 
+ * Функция calculate($num1, $num2, $operator) совершает математическую операцию операцию над числами
  **/
 function calculate($num1, $num2, $operator)
 {
@@ -38,7 +38,6 @@ function generationDataCalc()
         $answer = calculate($num1, $num2, $randomsing);
         return [$question, $answer];
     };
-    
+
     startGame($gameData, $rules);
 }
-
