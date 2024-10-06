@@ -9,7 +9,7 @@ use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 /**
  * Функция isPrimeNumber($num) проверяет является ли число четным или не четным
  **/
-function isEvenNumber($num)
+function isEvenNumber(int $num)
 {
     return $num % 2 === 0 ? true : false;
 }
