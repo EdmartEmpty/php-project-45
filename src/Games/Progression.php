@@ -4,7 +4,7 @@
  * Игра прогрессия
  **/
 
-namespace BrainGames\Progression;
+namespace BrainGames\Games\Progression;
 
 use function BrainGames\startGame\startGame;
 
@@ -27,13 +27,12 @@ function generationProgression(int $start, int $finish, int $step): array
  **/
 function generationDataProgression()
 {
-    $rules = "What number is missing in the progression?";
+    $rules = 'What number is missing in the progression?';
     $gameData = function () {
         $randStep = rand(MIN_RANGE, MAX_LENGHT);
         $fieldForGame = generationProgression(MIN_RANGE, MAX_RANGE, $randStep);
         $index = array_rand($fieldForGame, 1);
         $answer = $fieldForGame[$index];
-
         $fieldForGame[$index] = '..';
         $question = implode(" ", $fieldForGame);
         return [$question, $answer];

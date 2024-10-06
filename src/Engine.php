@@ -16,22 +16,20 @@ use function cli\prompt;
 function startGame(callable $gameData, string $rules)
 {
     line('Welcome to the Brain Games!');
-    $name = prompt("May I have your name?\n");
+    $name = prompt('May I have your name?');
     line("Hello, {$name}!");
     line($rules);
 
-    for ($i = 0; $i < ROUND_COUNT; $i++) {
+    for ($i = 1; $i <= ROUND_COUNT; $i++) {
         [$question,$answer] = $gameData();
-        line("Question: {$question}\n");
-        $userAnswer = prompt("Your answer:\n");
-
-        if ($userAnswer == $answer) {
-            line("Correct! {$name}\n");
-        } elseif ($userAnswer !== $answer) {
+        line("Question: {$question}");
+        $userAnswer = prompt('Your answer');
+        if ($userAnswer != $answer) {
             line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$answer}'.");
-            line("Let's try again, {$name}!\n");
-            exit;
+            line("Let's try again, {$name}!");
+            return;
         }
+        line("Correct! {$name}");
     }
     return line("Congratulations, {$name}!");
 }

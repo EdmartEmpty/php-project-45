@@ -4,7 +4,7 @@
  * Игра простое число
  **/
 
-namespace Braingames\Prime;
+namespace Braingames\Games\Prime;
 
 use function BrainGames\startGame\startGame;
 
@@ -31,7 +31,7 @@ function isPrime(int $num): bool
 /**
  * Функция generationDataPrimeInt() генерирует данные для игры PrimeInt
  **/
-function generationDataPrimeInt()
+function generationDataGamePrimeNumber()
 {
     $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

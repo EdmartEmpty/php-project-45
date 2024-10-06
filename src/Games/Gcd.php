@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Gcd;
+namespace BrainGames\Games\Gcd;
 
 use function BrainGames\startGame\startGame;
 
@@ -23,7 +23,7 @@ function gcd(mixed $a, mixed $b)
  **/
 function generationDataGcd()
 {
-    $rules = "Find the greatest common divisor of given numbers.";
+    $rules = 'Find the greatest common divisor of given numbers.';
 
     $gameData = function () {
         $num1 = random_int(MIN_RANGE, MAX_RANGE);
