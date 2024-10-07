@@ -24,7 +24,7 @@ function startGame(callable $gameData, string $rules)
         [$question,$answer] = $gameData();
         line("Question: {$question}");
         $userAnswer = prompt('Your answer');
-        if ($userAnswer != $answer) {
+        if ($userAnswer !== $answer) {
             line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$answer}'.");
             line("Let's try again, {$name}!");
             return;

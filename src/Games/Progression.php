@@ -32,7 +32,7 @@ function generationDataProgression()
         $randStep = rand(MIN_RANGE, MAX_LENGHT);
         $fieldForGame = generationProgression(MIN_RANGE, MAX_RANGE, $randStep);
         $index = array_rand($fieldForGame, 1);
-        $answer = $fieldForGame[$index];
+        $answer = (string) $fieldForGame[$index];
         $fieldForGame[$index] = '..';
         $question = implode(" ", $fieldForGame);
         return [$question, $answer];
