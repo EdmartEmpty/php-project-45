@@ -29,7 +29,7 @@ function generationDataGcd()
         $num1 = random_int(MIN_RANGE, MAX_RANGE);
         $num2 = random_int(MIN_RANGE, MAX_RANGE);
         $question = "{$num1} {$num2}";
-        $answer =(string) gcd($num1, $num2);
+        $answer = (string) gcd($num1, $num2);
         return [$question, $answer];
     };
     startGame($gameData, $rules);
