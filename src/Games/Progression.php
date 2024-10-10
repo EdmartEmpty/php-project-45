@@ -12,17 +12,6 @@ use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 
 const MAX_LENGTH = 10;
 /**
- * Функция generationProgression($start, $finish, $step) создающая массив из чисел c "шагом" арифмитической прогресии.
- **/
-function generationProgression(int $start, int $finish, int $step): array
-{
-    $result = [];
-    for ($i = $start; $i <= $finish; $i += $step) {
-        $result[] = $i;
-    }
-    return $result;
-}
-/**
  * Функция generationDataProgression() генерирует данные для игры Progression
  **/
 function generationDataProgression()
