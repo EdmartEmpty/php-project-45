@@ -17,7 +17,7 @@ function isPrime(int $num): bool
 {
     if ($num <= 1) {
         return false;
-    }  else {
+    } else {
         for ($i = 2; $i <= $num / 2; ++$i) {
             if ($num % $i === 0) {
                 return false;
@@ -25,7 +25,7 @@ function isPrime(int $num): bool
         }
     }
         return true;
-    }
+}
 /**
  * Функция generationDataPrimeInt() генерирует данные для игры PrimeInt
  **/
