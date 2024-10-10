@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Games\calc;
+namespace BrainGames\Games\Calc;
 
 use function BrainGames\startGame\startGame;
 
@@ -9,7 +9,7 @@ use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 /**
  * Функция calculate($num1, $num2, $operator) совершает математическую операцию операцию над числами
  **/
-function calculate(int $num1, int $num2, mixed $operator)
+function calculate(int $num1, int $num2, string $operator)
 {
     switch ($operator) {
         case '+':
@@ -19,7 +19,7 @@ function calculate(int $num1, int $num2, mixed $operator)
         case '*':
             return $num1 * $num2;
         default:
-            throw new \Exception('Нужно использовать только цифры');
+            throw new \Exception('Incorrect operator');
     }
 }
 /**
@@ -33,9 +33,9 @@ function generationDataCalc()
         $num1 = random_int(MIN_RANGE, MAX_RANGE);
         $num2 = random_int(MIN_RANGE, MAX_RANGE);
         $sing = ['+', '-', '*'];
-        $randomsing = $sing[array_rand($sing)];
-        $question = "{$num1} {$randomsing} {$num2}";
-        $answer = (string)calculate($num1, $num2, $randomsing);
+        $randomOperator = $sing[array_rand($sing)];
+        $question = "{$num1} {$randomOperator} {$num2}";
+        $answer = (string)calculate($num1, $num2, $randomOperator);
         return [$question, $answer];
     };
 

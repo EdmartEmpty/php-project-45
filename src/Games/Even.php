@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Games\even;
+namespace BrainGames\Games\Even;
 
 use function BrainGames\startGame\startGame;
 
@@ -11,13 +11,13 @@ use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
  **/
 function isEvenNumber(int $num)
 {
-    return $num % 2 === 0 ? true : false;
+    return $num % 2 === 0;
 }
 
 /**
  * Функция generationDataEvenOdd() генерирует данные для игры Even or Odd
  **/
-function generationDataEvenEven()
+function generationDataEven()
 {
     $rules = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
 

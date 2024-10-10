@@ -17,21 +17,19 @@ function isPrime(int $num): bool
 {
     if ($num <= 1) {
         return false;
-    } elseif ($num === 2) {
-        return true;
-    } else {
+    }  else {
         for ($i = 2; $i <= $num / 2; ++$i) {
             if ($num % $i === 0) {
                 return false;
             }
         }
+    }
         return true;
     }
-}
 /**
  * Функция generationDataPrimeInt() генерирует данные для игры PrimeInt
  **/
-function generationDataGamePrimeNumber()
+function generationDataPrime()
 {
     $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

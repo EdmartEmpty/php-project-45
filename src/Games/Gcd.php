@@ -9,9 +9,9 @@ use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
 /**
  * Функция gcd() определяет наибольший общий делитель по теореме Евклида НОД
  **/
-function gcd(mixed $a, mixed $b)
+function gcd(int $a, int $b)
 {
-    if ($b != 0) {
+    if ($b !== 0) {
         return gcd($b, $a % $b);
     } else {
         return $a;

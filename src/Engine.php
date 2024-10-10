@@ -31,5 +31,5 @@ function startGame(callable $gameData, string $rules)
         }
         line("Correct! {$name}");
     }
-    return line("Congratulations, {$name}!");
+    line("Congratulations, {$name}!");
 }
