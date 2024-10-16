@@ -4,11 +4,11 @@
  * Игра простое число
  **/
 
-namespace Braingames\Games\Prime;
+namespace BrainGames\Games\Prime;
 
-use function BrainGames\startGame\startGame;
+use function BrainGames\Engine\startGame;
 
-use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
+use const BrainGames\Engine\{MAX_RANGE,MIN_RANGE};
 
 /**
  * Функция getPrime проверяющая является ли число $num простым.
@@ -36,7 +36,7 @@ function generationDataPrime()
     $gameData = function () {
 
         $question = random_int(MIN_RANGE, MAX_RANGE);
-        $answer = (isPrime($question) === true) ? "yes" : "no";
+        $answer = isPrime($question) ? "yes" : "no";
         return [$question, $answer];
     };
     startGame($gameData, $rules);

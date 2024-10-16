@@ -2,9 +2,9 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\startGame\startGame;
+use function BrainGames\Engine\startGame;
 
-use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
+use const BrainGames\Engine\{MAX_RANGE,MIN_RANGE};
 
 /**
  * Функция isPrimeNumber($num) проверяет является ли число четным или не четным

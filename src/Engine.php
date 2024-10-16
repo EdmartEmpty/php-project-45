@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\startGame;
+namespace BrainGames\Engine;
 
 const MIN_RANGE = 1;
 const MAX_RANGE = 100;

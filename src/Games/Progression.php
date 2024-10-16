@@ -6,9 +6,9 @@
 
 namespace BrainGames\Games\Progression;
 
-use function BrainGames\startGame\startGame;
+use function BrainGames\Engine\startGame;
 
-use const BrainGames\startGame\{MAX_RANGE,MIN_RANGE};
+use const BrainGames\Engine\{MAX_RANGE,MIN_RANGE};
 
 const MAX_LENGTH = 10;
 /**
@@ -20,7 +20,7 @@ function generationDataProgression()
     $gameData = function () {
         $randStep = rand(MIN_RANGE, MAX_LENGTH);
         $progression = range(MIN_RANGE, MAX_RANGE, $randStep);
-        $index = array_rand($progression, 1);
+        $index = array_rand($progression);
         $answer = (string) $progression[$index];
         $progression[$index] = '..';
         $question = implode(" ", $progression);
