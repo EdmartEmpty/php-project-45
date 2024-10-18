@@ -19,7 +19,7 @@ function isEvenNumber(int $num)
  **/
 function generationDataEven()
 {
-    $rules = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+    $rules = 'Answer \"yes\" if the number is even, otherwise answer \"no\".';
 
     $gameData = function () {
         $question = random_int(MIN_RANGE, MAX_RANGE);
