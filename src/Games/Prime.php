@@ -36,7 +36,7 @@ function generationDataPrime()
     $gameData = function () {
 
         $question = random_int(MIN_RANGE, MAX_RANGE);
-        $answer = isPrime($question) ? "yes" : "no";
+        $answer = isPrime($question) ? 'yes' : 'no';
         return [$question, $answer];
     };
     startGame($gameData, $rules);
