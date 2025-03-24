@@ -10,16 +10,16 @@
 ```
 Далее необходимо следовать инструкции которая распологается ниже. 
 ```
-- Как установить зависимиости :
-- Используйте команду make install
+1. Как установить зависимиости :
+2. Используйте команду make install
 [![asciicast](https://asciinema.org/a/t1si59Du3jAuRzfqUxUA4C3kj.svg)](https://asciinema.org/a/t1si59Du3jAuRzfqUxUA4C3kj)
 
 - Как играть в игру четное - не четное.
 - Используйте команду make brain-even 
 [![asciicast](https://asciinema.org/a/CTXYwrjqQydksJkk2D6wyZ9cj.svg)](https://asciinema.org/a/CTXYwrjqQydksJkk2D6wyZ9cj)
 
-- Как играть в игру калькулятор.
-- Используйте команду make brain-calc 
+1. Как играть в игру калькулятор.
+2. Используйте команду make brain-calc 
 [![asciicast](https://asciinema.org/a/43tWAtdQQ4FLgPxMGRGT5gxfM.svg)](https://asciinema.org/a/43tWAtdQQ4FLgPxMGRGT5gxfM)
 - Как играть в игру "Наибольший общий делитель (НОД)"!
 - Используйте команду make brain-gcd
